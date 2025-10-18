@@ -1,0 +1,10 @@
+
+services:
+  bingoquest:
+    build: .
+    env_file: .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app/static/uploads:/app/app/static/uploads
+    restart: unless-stopped
